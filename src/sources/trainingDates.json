@@ -1,0 +1,68 @@
+{
+	"trainingDates": [
+		{
+			"trainID": "train1",
+			"dateString": "2023-03-06"
+		},
+		{
+			"trainID": "train2",
+			"dateString": "2023-04-03"
+		},
+		{
+			"trainID": "train3",
+			"dateString": "2023-04-10"
+		},
+		{
+			"trainID": "train4",
+			"dateString": "2023-04-17"
+		},
+		{
+			"trainID": "train5",
+			"dateString": "2023-04-24"
+		},
+		{
+			"trainID": "train6",
+			"dateString": "2023-05-09"
+		},
+		{
+			"trainID": "train7",
+			"dateString": "2023-05-15"
+		},
+		{
+			"trainID": "train8",
+			"dateString": "2023-06-05"
+		},
+		{
+			"trainID": "train9",
+			"dateString": "2023-06-07"
+		},
+		{
+			"trainID": "train10",
+			"dateString": "2023-06-20"
+		},
+		{
+			"trainID": "train11",
+			"dateString": "2023-06-26"
+		},
+		{
+			"trainID": "train12",
+			"dateString": "2023-06-28"
+		},
+		{
+			"trainID": "train13",
+			"dateString": "2023-07-03"
+		},
+		{
+			"trainID": "train14",
+			"dateString": "2023-07-08"
+		},
+		{
+			"trainID": "train15",
+			"dateString": "2023-07-18"
+		},
+		{
+			"trainID": "train16",
+			"dateString": "2023-07-24"
+		}
+	]
+}
