@@ -1,12 +1,7 @@
 import React from 'react';
-import SchemePage from './components/SchemePage';
 
 const App = () => {
-	return (
-		<div>
-			<SchemePage />
-		</div>
-	);
+	return <div></div>;
 };
 
 export default App;
