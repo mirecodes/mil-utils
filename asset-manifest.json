@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mil-utils/static/css/main.e872a6ad.css",
+    "main.js": "/mil-utils/static/js/main.a37aeaa4.js",
+    "index.html": "/mil-utils/index.html",
+    "main.e872a6ad.css.map": "/mil-utils/static/css/main.e872a6ad.css.map",
+    "main.a37aeaa4.js.map": "/mil-utils/static/js/main.a37aeaa4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e872a6ad.css",
+    "static/js/main.a37aeaa4.js"
+  ]
+}
