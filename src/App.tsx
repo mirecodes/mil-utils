@@ -1,7 +1,12 @@
 import React from 'react';
+import PlansApp from './containers/PlansApp';
 
 const App = () => {
-	return <div></div>;
+	return (
+		<div>
+			<PlansApp />
+		</div>
+	);
 };
 
 export default App;
