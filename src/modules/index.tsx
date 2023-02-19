@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import plansApp from './plansApp';
+import plans from './plans';
+import today from './today';
 
 const rootReducer = combineReducers({
-	plansApp,
+	plans,
+	today,
 });
 
 export default rootReducer;

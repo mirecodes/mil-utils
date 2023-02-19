@@ -1,5 +1,5 @@
 import React from 'react';
-import { Training } from '../modules/plansApp';
+import { Training } from '../modules/plans';
 import PlansTableItem from './PlansTableItem';
 
 type PlansTableProps = {
