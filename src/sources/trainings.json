@@ -2,23 +2,83 @@
 	"trainings": [
 		{
 			"idx": 1,
-			"name": "train1",
+			"name": "기본1차",
 			"dateString": "2023-03-06"
 		},
 		{
 			"idx": 2,
-			"name": "train2",
+			"name": "동미1차1",
 			"dateString": "2023-04-03"
 		},
 		{
 			"idx": 3,
-			"name": "train3",
+			"name": "동미1차2",
 			"dateString": "2023-04-10"
 		},
 		{
 			"idx": 4,
-			"name": "train4",
+			"name": "동미1차3",
 			"dateString": "2023-04-17"
+		},
+		{
+			"idx": 5,
+			"name": "방침1차",
+			"dateString": "2023-04-24"
+		},
+		{
+			"idx": 6,
+			"name": "작계1차",
+			"dateString": "2023-05-09"
+		},
+		{
+			"idx": 7,
+			"name": "동미2차1",
+			"dateString": "2023-05-18"
+		},
+		{
+			"idx": 8,
+			"name": "방침2차",
+			"dateString": "2023-06-05"
+		},
+		{
+			"idx": 9,
+			"name": "작계2차",
+			"dateString": "2023-06-07"
+		},
+		{
+			"idx": 10,
+			"name": "동원훈련",
+			"dateString": "2023-06-20"
+		},
+		{
+			"idx": 11,
+			"name": "기본2차",
+			"dateString": "2023-06-26"
+		},
+		{
+			"idx": 12,
+			"name": "작계3차",
+			"dateString": "2023-06-28"
+		},
+		{
+			"idx": 13,
+			"name": "동미2차2",
+			"dateString": "2023-07-03"
+		},
+		{
+			"idx": 14,
+			"name": "휴일예비군",
+			"dateString": "2023-07-08"
+		},
+		{
+			"idx": 15,
+			"name": "기본3차",
+			"dateString": "2023-07-18"
+		},
+		{
+			"idx": 16,
+			"name": "동미3차",
+			"dateString": "2023-07-24"
 		}
 	]
 }

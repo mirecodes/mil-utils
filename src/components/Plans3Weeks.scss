@@ -1,20 +1,103 @@
+$totalWidth: 40rem;
+
 .Plans3Weeks {
+	width: $totalWidth;
+	margin: 2rem auto;
+	border-radius: 0.5rem;
+	overflow: hidden;
+
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
 	align-items: stretch;
 
-	div {
-		flex: 1;
+	.DaysInAWeek {
+		background: rgb(22, 184, 207);
+		color: white;
+		height: 3rem;
+		font-size: 1rem;
 
 		display: flex;
 		flex-flow: row;
+		justify-content: center;
+
 		div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			flex: 1;
 
+			&:hover {
+				background-color: coral;
+			}
+		}
+	}
+
+	.LastWeekPlans,
+	.ThisWeekPlans,
+	.NextWeekPlans {
+		height: 5rem;
+		font-size: 1rem;
+
+		display: flex;
+		flex-flow: row;
+		justify-content: start;
+		.WeekType {
+			background: rgb(83, 83, 83);
+			color: white;
+			font-size: 1rem;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover {
+				background-color: coral;
+			}
+		}
+
+		.DateCell {
+			background-color: white;
 			display: flex;
 			flex-flow: column;
-			border: 1px solid black;
+			justify-content: flex-start;
+			align-items: start;
+			width: 12.5%;
+			.Date {
+				font-size: 0.8rem;
+				text-decoration: underline;
+				padding-left: 0.25rem;
+				height: 1rem;
+				flex: 0;
+			}
+
+			&:hover {
+				background-color: coral;
+			}
+			& + .DateCell {
+				border-left: solid 1px rgb(83, 83, 83);
+			}
+			.Training {
+				padding-left: 0.25rem;
+				font-size: 0.75rem;
+				text-overflow: hidden;
+			}
+		}
+
+		.EnlightenedCell {
+			background-color: lightblue;
+		}
+		.Today {
+			background-color: deepskyblue;
+		}
+
+		& + div {
+			border-top: solid 1px rgb(83, 83, 83);
+		}
+
+		div {
+			flex: 1;
+			padding: 0;
 		}
 	}
 }

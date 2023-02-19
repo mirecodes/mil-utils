@@ -1,11 +1,14 @@
-import React, { CSSProperties } from 'react';
+import { CSSProperties } from 'react';
 import { Training, getDMDates } from '../modules/plans';
+import { Today } from '../modules/today';
+import classNames from 'classnames';
 
 type PlansTableItemProps = {
 	training: Training;
+	dateToday: Today;
 };
 
-const PlansTableItem = ({ training }: PlansTableItemProps) => {
+const PlansTableItem = ({ training, dateToday }: PlansTableItemProps) => {
 	// CSS Properties
 	const textStyle: CSSProperties = {
 		textDecoration: 'line-through',
@@ -25,12 +28,26 @@ const PlansTableItem = ({ training }: PlansTableItemProps) => {
 	const dMDates = getDMDates(training);
 	const dMDatesList = [training.idx, training.name, dMDates.theDate, dMDates.DM8, dMDates.DM15, dMDates.DM22, dMDates.DM30];
 
+	const dayToday = dateToday.getDay();
+	const startOfWeek = new Date(dateToday.getTime() + -dayToday * 24 * 3600 * 1000);
+	const endOfWeek = new Date(dateToday.getTime() + (-dayToday + 7) * 24 * 3600 * 1000);
+
+	const evaluateDateToday = (dMDate: string | number | Date): boolean => {
+		switch (typeof dMDate) {
+			case 'string':
+			case 'number':
+				return false;
+			default:
+				return dMDate >= startOfWeek && dMDate < endOfWeek;
+		}
+	};
+
 	// rendering
 	return (
 		<tr>
 			{dMDatesList.map((dMDate) => (
 				<td>
-					<div>{dateToString(dMDate)}</div>
+					<div className={classNames('DMDate', { ThisWeek: evaluateDateToday(dMDate) })}>{dateToString(dMDate)}</div>
 				</td>
 			))}
 		</tr>

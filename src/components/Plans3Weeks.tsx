@@ -2,6 +2,7 @@ import React from 'react';
 import { Today } from '../modules/today';
 import { Training, TrainingDMDates, Trainings, getDMDates } from '../modules/plans';
 import './Plans3Weeks.scss';
+import classNames from 'classnames';
 
 type PlansNearbyProps = {
 	dateToday: Today;
@@ -44,11 +45,11 @@ const Plans3Weeks = ({ dateToday, trainings }: PlansNearbyProps) => {
 
 	trainingsDMDates.map((trainingDMDates) => {
 		const { theDate, DM8, DM15, DM22, DM30 } = trainingDMDates.dMDates;
-		pushDate(theDate, trainingDMDates.name, 'theDate');
-		pushDate(DM8, trainingDMDates.name, 'D-8');
-		pushDate(DM15, trainingDMDates.name, 'D-15');
-		pushDate(DM22, trainingDMDates.name, 'D-22');
-		pushDate(DM30, trainingDMDates.name, 'D-30');
+		pushDate(theDate, trainingDMDates.name, '당일');
+		pushDate(DM8, trainingDMDates.name, '-8');
+		pushDate(DM15, trainingDMDates.name, '-15');
+		pushDate(DM22, trainingDMDates.name, '-22');
+		pushDate(DM30, trainingDMDates.name, '-30');
 		return null;
 	});
 
@@ -74,32 +75,47 @@ const Plans3Weeks = ({ dateToday, trainings }: PlansNearbyProps) => {
 	};
 
 	const noteDMDatesArrayToString = (noteDMDates: NoteDMDate[]) => {
-		return noteDMDates.map((noteDMDate) => <div>{noteDMDate.name + noteDMDate.dMDateType}</div>);
+		return noteDMDates.map((noteDMDate) => <div>{noteDMDate.name + '/' + noteDMDate.dMDateType}</div>);
 	};
+
+	const days = ['', '일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
 
 	return (
 		<div className={'Plans3Weeks'}>
+			<div className={'DaysInAWeek'}>
+				{days.map((day) => (
+					<div>{day}</div>
+				))}
+			</div>
 			<div className={'LastWeekPlans'}>
+				<div className={'WeekType'}>저번주</div>
 				{lastWeek.map((dailyPlan) => (
-					<div>
-						{dateToString(dailyPlan.date)}
-						<div>{noteDMDatesArrayToString(dailyPlan.noteDMDates)}</div>
+					<div className={classNames('DateCell', { EnlightenedCell: dailyPlan.noteDMDates.length > 0 })}>
+						<div className={'Date'}>{dateToString(dailyPlan.date)}</div>
+						<div className="Training">{noteDMDatesArrayToString(dailyPlan.noteDMDates)}</div>
 					</div>
 				))}
 			</div>
 			<div className={'ThisWeekPlans'}>
+				<div className={'WeekType'}>이번주</div>
 				{thisWeek.map((dailyPlan) => (
-					<div>
-						{dateToString(dailyPlan.date)}
-						<div>{noteDMDatesArrayToString(dailyPlan.noteDMDates)}</div>
+					<div
+						className={classNames(
+							'DateCell',
+							{ EnlightenedCell: dailyPlan.noteDMDates.length > 0 },
+							{ Today: dailyPlan.date.getDate() === dateToday.getDate() }
+						)}>
+						<div className={'Date'}>{dateToString(dailyPlan.date)}</div>
+						<div className={classNames('Training')}>{noteDMDatesArrayToString(dailyPlan.noteDMDates)}</div>
 					</div>
 				))}
 			</div>
 			<div className={'NextWeekPlans'}>
+				<div className={'WeekType'}>다음주</div>
 				{nextWeek.map((dailyPlan) => (
-					<div>
-						{dateToString(dailyPlan.date)}
-						<div>{noteDMDatesArrayToString(dailyPlan.noteDMDates)}</div>
+					<div className={classNames('DateCell', { EnlightenedCell: dailyPlan.noteDMDates.length > 0 })}>
+						<div className={'Date'}>{dateToString(dailyPlan.date)}</div>
+						<div className={'Training'}>{noteDMDatesArrayToString(dailyPlan.noteDMDates)}</div>
 					</div>
 				))}
 			</div>

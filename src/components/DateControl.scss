@@ -1,0 +1,36 @@
+$totalWidth: 24rem;
+
+.DateController {
+	width: $totalWidth;
+	height: 3rem;
+
+	margin: 0 auto 2rem auto;
+	background-color: white;
+
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	.button {
+		padding: 0;
+		width: 3rem;
+		color: white;
+		background-color: rgb(83, 83, 83);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:hover {
+			cursor: default;
+		}
+		&:active {
+			background-color: coral;
+		}
+	}
+	.dateToday {
+		width: $totalWidth - 4 * 3rem;
+		font-size: 1.25rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

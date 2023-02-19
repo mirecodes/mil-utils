@@ -1,0 +1,28 @@
+$maxWidth: 40rem;
+
+.PlansTable {
+	margin: 2rem auto;
+	width: $maxWidth;
+	font-size: 1rem;
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		th {
+			background-color: rgb(22, 184, 207);
+			color: white;
+			border: 1px solid white;
+			padding: 0.25rem 0.5rem;
+			text-align: center;
+		}
+		td {
+			border: 1px solid ghostwhite;
+			background-color: white;
+			padding: 0.25rem 0.5rem;
+			text-align: center;
+		}
+		.ThisWeek {
+			background-color: orange;
+		}
+	}
+}

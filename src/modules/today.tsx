@@ -37,11 +37,11 @@ initialDate.setHours(9, 0, 0, 0);
 const today = (state: Today = initialDate, action: todayAction): Today => {
 	switch (action.type) {
 		case INCREASE_DATE:
-			return new Date(state.getDate() + 1);
+			return new Date(state.getTime() + 1 * 24 * 3600 * 1000);
 		case DECREASE_DATE:
-			return new Date(state.getDate() - 1);
+			return new Date(state.getTime() - 1 * 24 * 3600 * 1000);
 		case INCREASE_DATE_BY:
-			return new Date(state.getDate() + action.payload.num);
+			return new Date(state.getTime() + action.payload.num * 24 * 3600 * 1000);
 		default:
 			return state;
 	}
