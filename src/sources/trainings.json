@@ -1,0 +1,24 @@
+{
+	"trainings": [
+		{
+			"idx": 1,
+			"name": "train1",
+			"dateString": "2023-03-06"
+		},
+		{
+			"idx": 2,
+			"name": "train2",
+			"dateString": "2023-04-03"
+		},
+		{
+			"idx": 3,
+			"name": "train3",
+			"dateString": "2023-04-10"
+		},
+		{
+			"idx": 4,
+			"name": "train4",
+			"dateString": "2023-04-17"
+		}
+	]
+}
