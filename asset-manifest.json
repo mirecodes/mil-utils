@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mil-utils/static/css/main.e490de87.css",
-    "main.js": "/mil-utils/static/js/main.5ef17403.js",
+    "main.css": "/mil-utils/static/css/main.00db032c.css",
+    "main.js": "/mil-utils/static/js/main.0402b02f.js",
     "index.html": "/mil-utils/index.html",
-    "main.e490de87.css.map": "/mil-utils/static/css/main.e490de87.css.map",
-    "main.5ef17403.js.map": "/mil-utils/static/js/main.5ef17403.js.map"
+    "main.00db032c.css.map": "/mil-utils/static/css/main.00db032c.css.map",
+    "main.0402b02f.js.map": "/mil-utils/static/js/main.0402b02f.js.map"
   },
   "entrypoints": [
-    "static/css/main.e490de87.css",
-    "static/js/main.5ef17403.js"
+    "static/css/main.00db032c.css",
+    "static/js/main.0402b02f.js"
   ]
 }
