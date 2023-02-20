@@ -52,6 +52,16 @@ export type TrainingDMDates = Training & { dMDates: DMDates };
 
 export type Trainings = Array<Training>;
 
+export type NoteDMDate = {
+	name: string;
+	dMDateType: string;
+};
+
+export type DailyPlan = {
+	date: Date;
+	noteDMDates: NoteDMDate[];
+};
+
 // functions
 export const getDMDates = (training: Training): DMDates => {
 	const theDate = new Date(training.dateString);

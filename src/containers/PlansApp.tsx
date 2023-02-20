@@ -5,7 +5,6 @@ import { addTraining, modifyTraining, removeTraining } from '../modules/plans';
 import PlansTable from '../components/PlansTable';
 import { decreaseDate, increaseDate, increaseDateBy } from '../modules/today';
 import Plans3Weeks from '../components/Plans3Weeks';
-import DateControl from '../components/DateControl';
 
 const PlansApp = () => {
 	const trainings = useSelector((state: RootState) => state.plans);
@@ -33,8 +32,13 @@ const PlansApp = () => {
 
 	return (
 		<div>
-			<Plans3Weeks dateToday={today} trainings={trainings} />
-			<DateControl dateToday={today} onIncreaseToday={onIncreaseToday} onDecreaseToday={onDecreaseToday} onInCreaseTodayBy={onIncreaseTodayBy} />
+			<Plans3Weeks
+				dateToday={today}
+				trainings={trainings}
+				onIncreaseToday={onIncreaseToday}
+				onDecreaseToday={onDecreaseToday}
+				onIncreaseTodayBy={onIncreaseTodayBy}
+			/>
 			<hr />
 			<PlansTable trainings={trainings} dateToday={today} />
 		</div>

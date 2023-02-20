@@ -1,0 +1,32 @@
+$totalWidth: 40rem;
+
+.WeeklyPlan {
+	width: $totalWidth - 2rem;
+	margin: 2rem auto;
+	background-color: white;
+	padding: 1rem;
+	border: solid 4px rgb(83, 83, 83);
+
+	.WeeklyPlanCell {
+		margin: 0 0 1rem 0;
+		padding: 0;
+
+		.WeeklyPlanTitle {
+			text-decoration: underline;
+		}
+		.WeeklyPlanBody {
+			margin-left: 1rem;
+		}
+
+		&:hover {
+			color: coral;
+		}
+	}
+
+	.strong {
+		color: royalblue;
+	}
+
+	display: flex;
+	flex-flow: column;
+}

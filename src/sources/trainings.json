@@ -7,76 +7,86 @@
 		},
 		{
 			"idx": 2,
+			"name": "기본1차(순천)1",
+			"dateString": "2023-03-13"
+		},
+		{
+			"idx": 3,
+			"name": "기본1차(순천)2",
+			"dateString": "2023-03-20"
+		},
+		{
+			"idx": 4,
 			"name": "동미1차1",
 			"dateString": "2023-04-03"
 		},
 		{
-			"idx": 3,
+			"idx": 5,
 			"name": "동미1차2",
 			"dateString": "2023-04-10"
 		},
 		{
-			"idx": 4,
+			"idx": 6,
 			"name": "동미1차3",
 			"dateString": "2023-04-17"
 		},
 		{
-			"idx": 5,
+			"idx": 7,
 			"name": "방침1차",
 			"dateString": "2023-04-24"
 		},
 		{
-			"idx": 6,
+			"idx": 8,
 			"name": "작계1차",
 			"dateString": "2023-05-09"
 		},
 		{
-			"idx": 7,
+			"idx": 9,
 			"name": "동미2차1",
 			"dateString": "2023-05-18"
 		},
 		{
-			"idx": 8,
-			"name": "방침2차",
+			"idx": 10,
+			"name": "방침2차1",
 			"dateString": "2023-06-05"
 		},
 		{
-			"idx": 9,
+			"idx": 11,
 			"name": "작계2차",
 			"dateString": "2023-06-07"
 		},
 		{
-			"idx": 10,
+			"idx": 12,
 			"name": "동원훈련",
 			"dateString": "2023-06-20"
 		},
 		{
-			"idx": 11,
+			"idx": 13,
 			"name": "기본2차",
 			"dateString": "2023-06-26"
 		},
 		{
-			"idx": 12,
+			"idx": 14,
 			"name": "작계3차",
 			"dateString": "2023-06-28"
 		},
 		{
-			"idx": 13,
+			"idx": 15,
 			"name": "동미2차2",
 			"dateString": "2023-07-03"
 		},
 		{
-			"idx": 14,
+			"idx": 16,
 			"name": "휴일예비군",
 			"dateString": "2023-07-08"
 		},
 		{
-			"idx": 15,
+			"idx": 17,
 			"name": "기본3차",
 			"dateString": "2023-07-18"
 		},
 		{
-			"idx": 16,
+			"idx": 18,
 			"name": "동미3차",
 			"dateString": "2023-07-24"
 		}

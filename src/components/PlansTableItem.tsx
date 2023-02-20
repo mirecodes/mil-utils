@@ -28,9 +28,12 @@ const PlansTableItem = ({ training, dateToday }: PlansTableItemProps) => {
 	const dMDates = getDMDates(training);
 	const dMDatesList = [training.idx, training.name, dMDates.theDate, dMDates.DM8, dMDates.DM15, dMDates.DM22, dMDates.DM30];
 
-	const dayToday = dateToday.getDay();
-	const startOfWeek = new Date(dateToday.getTime() + -dayToday * 24 * 3600 * 1000);
-	const endOfWeek = new Date(dateToday.getTime() + (-dayToday + 7) * 24 * 3600 * 1000);
+	let dayToday = dateToday.getDay();
+	if (dayToday === 0) {
+		dayToday = 7;
+	}
+	const startOfWeek = new Date(dateToday.getTime() + (-dayToday + 1) * 24 * 3600 * 1000);
+	const endOfWeek = new Date(dateToday.getTime() + (-dayToday + 7 + 1) * 24 * 3600 * 1000);
 
 	const evaluateDateToday = (dMDate: string | number | Date): boolean => {
 		switch (typeof dMDate) {
@@ -46,8 +49,8 @@ const PlansTableItem = ({ training, dateToday }: PlansTableItemProps) => {
 	return (
 		<tr>
 			{dMDatesList.map((dMDate) => (
-				<td>
-					<div className={classNames('DMDate', { ThisWeek: evaluateDateToday(dMDate) })}>{dateToString(dMDate)}</div>
+				<td className={classNames('DMDate', { ThisWeek: evaluateDateToday(dMDate) })}>
+					<div>{dateToString(dMDate)}</div>
 				</td>
 			))}
 		</tr>
